@@ -7,6 +7,8 @@ pragma solidity ^0.4.18;
 // -------------------------------------------------
 // ERC Token Standard #20 Interface
 // https://github.com/ethereum/EIPs/issues/20
+// EPX Sources
+// https://github.com/EthPokerIO/ethpokerIO
 // -------------------------------------------------
 // 2018 improvements:
 // - added transferAnyERC20Token function to capture airdropped tokens
