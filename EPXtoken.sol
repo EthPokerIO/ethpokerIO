@@ -9,7 +9,7 @@ pragma solidity ^0.4.18;
 // https://github.com/ethereum/EIPs/issues/20
 // EPX contract sources:
 // https://github.com/EthPokerIO/ethpokerIO
-// -------------------------------------------------
+// ------------------------------------------------
 // 2018 improvements:
 // - added transferAnyERC20Token function to capture airdropped tokens
 // - added revert() rejection of any Eth sent to the token address itself

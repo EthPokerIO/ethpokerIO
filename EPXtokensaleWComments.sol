@@ -9,7 +9,7 @@ pragma solidity ^0.4.18;
 // https://github.com/ethereum/EIPs/issues/20
 // EPX contract sources:
 // https://github.com/EthPokerIO/ethpokerIO
-// -------------------------------------------------
+// ------------------------------------------------
 // 2018 improvements:
 // - Updates to comply with latest Solidity versioning (0.4.18):
 // -   Classification of internal/private vs public functions
