@@ -5,9 +5,9 @@ pragma solidity ^0.4.18;
 // Revision 20b
 // Refunds integrated, full test suite 20r passed
 // -------------------------------------------------
-// ERC Token Standard #20 Interface:
+// ERC Token Standard #20 interface:
 // https://github.com/ethereum/EIPs/issues/20
-// EPX Sources:
+// EPX contract sources:
 // https://github.com/EthPokerIO/ethpokerIO
 // -------------------------------------------------
 // 2018 improvements:
