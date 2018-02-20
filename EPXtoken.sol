@@ -14,7 +14,7 @@ pragma solidity ^0.4.18;
 // - added transferAnyERC20Token function to capture airdropped tokens
 // - added revert() rejection of any Eth sent to the token address itself
 // - additional gas optimisation performed (round 3)
-// -------------------------------------------------
+// ------------------------------------------------- 
 // Security reviews passed - cycle 20r
 // Functional reviews passed - cycle 20r
 // Final code revision and regression test cycle passed - cycle 20r
