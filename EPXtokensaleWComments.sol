@@ -115,12 +115,12 @@ contract EPXCrowdsale is owned, safeMath {
 
   // total number of tokens initially
   function initialEPXSupply() public view returns (uint256 initialEPXtokenCount) {
-    return safeDiv(initialTokenSupply,10000); // div by 1,000 for display normalisation (4 decimals)
+    return safeDiv(initialTokenSupply,10000); // div by 10,000 for display normalisation (4 decimals)
   }
 
   // remaining number of tokens
   function remainingEPXSupply() public view returns (uint256 remainingEPXtokenCount) {
-    return safeDiv(tokensRemaining,10000); // div by 100 for display normalisation (4 decimals)
+    return safeDiv(tokensRemaining,10000); // div by 10,000 for display normalisation (4 decimals)
   }
 
   // setup the CrowdSale parameters
@@ -129,15 +129,15 @@ contract EPXCrowdsale is owned, safeMath {
     && (!(isCrowdSaleSetup))
     && (!(beneficiaryWallet > 0))) {
       // init addresses
-      beneficiaryWallet                       = 0x9Dec362A19e029306AaFfD1b4E990b8F74B83D67;
-      tokenReward                             = StandardToken();
+      beneficiaryWallet                       = 0x7A29e1343c6a107ce78199F1b3a1d2952efd77bA;
+      tokenReward                             = StandardToken(0x0C686Cd98F816bf63C037F39E73C1b7A35b51D4C);
 
       // funding targets
-      fundingMinCapInWei                      = 3000000000000000000;                              // 3000000000000000000 =  3 Eth (min cap) - testnet mincap
+      fundingMinCapInWei                      = 3000000000000000000;
 
       // update values
       amountRaisedInWei                       = 0;
-      initialTokenSupply                      = 100000000000;                                     // 10,000,000 + 4 decimals = 100000000000, only selling 10M of 280M in preSale
+      initialTokenSupply                      = 50000000;                                     // 50,000,000
       tokensRemaining                         = initialTokenSupply;
       fundingStartBlock                       = _fundingStartBlock;
       fundingEndBlock                         = _fundingEndBlock;
