@@ -21,6 +21,7 @@ pragma solidity ^0.4.18;
 // - Burn event now records number of EPX tokens burned vs Refund event Eth
 // - Transfer event now fired when beneficiaryWallet withdraws
 // - Gas req optimisation for payable function to maximise compatibility
+// - Going live for initial Presale round 02/03/2018
 // -------------------------------------------------
 // Security reviews passed - cycle 20r
 // Functional reviews passed - cycle 20r
@@ -133,11 +134,11 @@ contract EPXCrowdsale is owned, safeMath {
       tokenReward                             = StandardToken(0x0C686Cd98F816bf63C037F39E73C1b7A35b51D4C);
 
       // funding targets
-      fundingMinCapInWei                      = 3000000000000000000;                          // ETH 3 + 000000000000000000 18 dec wei
+      fundingMinCapInWei                      = 30000000000000000000;                       // ETH 300 + 000000000000000000 18 dec wei
 
       // update values
       amountRaisedInWei                       = 0;
-      initialTokenSupply                      = 500000000000;                                 // 50,000,000 + 4 dec resolution
+      initialTokenSupply                      = 200000000000;                               // 20,000,000 + 4 dec resolution
       tokensRemaining                         = initialTokenSupply;
       fundingStartBlock                       = _fundingStartBlock;
       fundingEndBlock                         = _fundingEndBlock;
