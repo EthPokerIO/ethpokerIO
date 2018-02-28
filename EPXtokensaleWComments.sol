@@ -133,11 +133,11 @@ contract EPXCrowdsale is owned, safeMath {
       tokenReward                             = StandardToken(0x0C686Cd98F816bf63C037F39E73C1b7A35b51D4C);
 
       // funding targets
-      fundingMinCapInWei                      = 3000000000000000000;
+      fundingMinCapInWei                      = 3000000000000000000;                          // ETH 3 + 000000000000000000 18 dec wei
 
       // update values
       amountRaisedInWei                       = 0;
-      initialTokenSupply                      = 50000000;                                     // 50,000,000
+      initialTokenSupply                      = 500000000000;                                 // 50,000,000 + 4 dec resolution
       tokensRemaining                         = initialTokenSupply;
       fundingStartBlock                       = _fundingStartBlock;
       fundingEndBlock                         = _fundingEndBlock;
@@ -155,16 +155,12 @@ contract EPXCrowdsale is owned, safeMath {
   }
 
   function checkPrice() internal view returns (uint256 currentPriceValue) {
-    if (block.number >= fundingStartBlock+401) { // Final Week
-      return (1150);
-    } else if (block.number >= fundingStartBlock+301) { // Third Week
-      return (1250);
-    } else if (block.number >= fundingStartBlock+201) { // Second Week
-      return (1300);
-    } else if (block.number >= fundingStartBlock+101) { // First Week
-      return (1400);
-    } else if (block.number >= fundingStartBlock) { // First Day
-      return (1500);
+    if (block.number >= fundingStartBlock+177534) { // 30-day price change/final 30day change
+      return (7600); //30days-end   =7600ARX:1ETH
+    } else if (block.number >= fundingStartBlock+124274) { //3 week mark/over 21days
+      return (8200); //3w-30days    =8200ARX:1ETH
+    } else if (block.number >= fundingStartBlock) { // start [0 hrs]
+      return (8800); //0-3weeks     =8800ARX:1ETH
     }
   }
 
